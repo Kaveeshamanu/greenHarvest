@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenHarvest - Smart Farming Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=7" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="showPage('home'); return false;">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+            <path d="M24 5C24 5 15 8 11 15C8 20 9 28 9 28C9 28 12 21 18 17C24 13 24 5 24 5Z" fill="white" opacity="0.95"/>
+            <path d="M9 28C9 28 7 21 7 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">GreenHarvest</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" id="nav-home" onclick="showPage('home'); return false;">Home</a></li>
+        <li><a href="#" class="nav-link" id="nav-about" onclick="showPage('about'); return false;">About</a></li>
+        <li><a href="#" class="nav-link" id="nav-services" onclick="showPage('services'); return false;">Services</a></li>
+        <li><a href="#" class="nav-link" id="nav-marketplace" onclick="showPage('marketplace'); return false;">Marketplace</a></li>
+        <li><a href="#" class="nav-link" id="nav-contact" onclick="showPage('contact'); return false;">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" class="mobile-link" onclick="showPage('home'); closeMobileMenu(); return false;">Home</a>
+      <a href="#" class="mobile-link" onclick="showPage('about'); closeMobileMenu(); return false;">About</a>
+      <a href="#" class="mobile-link" onclick="showPage('services'); closeMobileMenu(); return false;">Services</a>
+      <a href="#" class="mobile-link" onclick="showPage('marketplace'); closeMobileMenu(); return false;">Marketplace</a>
+      <a href="#" class="mobile-link" onclick="showPage('contact'); closeMobileMenu(); return false;">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===================== HOME PAGE ===================== -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-bg-image"></div>
+      <div class="hero-content container">
+        <span class="hero-eyebrow">SMART AGRI-TECH SOLUTIONS</span>
+        <h1 class="hero-title">Smart Farming Solutions<br /><span class="hero-accent">for a Better Future</span></h1>
+        <p class="hero-desc">Empowering farmers with cutting-edge technology and data-driven insights to maximise productivity and sustainability.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" onclick="showPage('services'); return false;">Explore Services &rarr;</a>
+          <a href="#" class="btn btn-outline-white" onclick="showPage('marketplace'); return false;">Browse Marketplace</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="about-preview">
+          <div class="about-preview-text">
+            <p class="eyebrow">WHO WE ARE</p>
+            <h2 class="section-title">About GreenHarvest</h2>
+            <p class="body-text">We provide smart agricultural solutions to farmers using technology and innovation. GreenHarvest Agriculture Solutions is an Agri-tech company dedicated to improving agricultural productivity and sustainability through digital technologies.</p>
+            <a href="#" class="btn btn-primary" onclick="showPage('about'); return false;">Learn More &rarr;</a>
+          </div>
+          <div class="about-preview-image">
+            <img src="assets/images/about-farm.jpg" alt="Lush rice field representing sustainable farming" class="about-farm-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">OUR SERVICES</p>
+          <h2 class="section-title">What We Offer</h2>
+          <p class="section-desc">Comprehensive agricultural solutions designed to help farmers thrive in the modern era.</p>
+        </div>
+        <div class="cards-grid-3">
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#008236" stroke-width="2" width="32" height="32" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Smart Advisory</h3>
+            <p class="card-desc">AI-based guidance and data-driven insights to support informed agricultural decisions for your farm.</p>
+            <a href="#" class="card-link" onclick="showPage('services'); return false;">Learn more &rarr;</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#008236" stroke-width="2" width="32" height="32" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Crop Monitoring</h3>
+            <p class="card-desc">Real-time tracking of crop health, soil conditions, and weather patterns to optimise your harvest yield.</p>
+            <a href="#" class="card-link" onclick="showPage('services'); return false;">Learn more &rarr;</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#008236" stroke-width="2" width="32" height="32" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Marketplace</h3>
+            <p class="card-desc">Buy quality farm products — seeds, fertilisers, equipment, and more at competitive prices.</p>
+            <a href="#" class="card-link" onclick="showPage('marketplace'); return false;">Browse now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home CTA -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <h2 class="cta-title">Ready to Transform Your Farm?</h2>
+        <p class="cta-desc">Join thousands of farmers already using GreenHarvest solutions to grow smarter and harvest better.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-white" onclick="showPage('contact'); return false;">Get Started Today</a>
+          <a href="#" class="btn btn-outline-white" onclick="showPage('services'); return false;">View Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo-text">GreenHarvest</span>
+          <p class="footer-tagline">Smart farming solutions for a sustainable future.</p>
+        </div>
+        <div class="footer-links-group">
+          <p class="footer-heading">Quick Links</p>
+          <a href="#" onclick="showPage('home'); return false;" class="footer-link">Home</a>
+          <a href="#" onclick="showPage('about'); return false;" class="footer-link">About</a>
+          <a href="#" onclick="showPage('services'); return false;" class="footer-link">Services</a>
+          <a href="#" onclick="showPage('marketplace'); return false;" class="footer-link">Marketplace</a>
+        </div>
+        <div class="footer-links-group">
+          <p class="footer-heading">Contact</p>
+          <span class="footer-link">contact@greenharvest.lk</span>
+          <span class="footer-link">+94 11 234 5678</span>
+          <span class="footer-link">Colombo, Sri Lanka</span>
+        </div>
+        <div class="footer-links-group">
+          <p class="footer-heading">Follow Us</p>
+          <a href="#" class="footer-link">Facebook</a>
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">LinkedIn</a>
+          <a href="#" class="footer-link">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 GreenHarvest Agriculture Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>

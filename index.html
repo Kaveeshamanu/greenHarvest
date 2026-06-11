@@ -442,3 +442,117 @@
       </div>
     </footer>
   </div>
+
+  <!-- ===================== MARKETPLACE PAGE ===================== -->
+  <div id="page-marketplace" class="page">
+
+    <!-- Page Hero -->
+    <div class="page-hero page-hero-short page-hero--marketplace">
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <h1 class="page-hero-title">Marketplace</h1>
+        <p class="page-hero-desc">Quality agricultural products at competitive prices, delivered to your farm.</p>
+      </div>
+    </div>
+
+    <section class="section bg-light marketplace-section">
+      <div class="container">
+        <!-- Search Bar -->
+        <div class="marketplace-search-bar">
+          <div class="search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" class="search-input" id="productSearch" placeholder="Search for products..." oninput="filterProducts()" />
+          </div>
+          <select class="sort-select" onchange="sortProducts(this.value)">
+            <option value="default">Sort by: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name A-Z</option>
+          </select>
+        </div>
+
+        <div class="marketplace-layout">
+          <!-- Filters Sidebar -->
+          <aside class="filters-sidebar">
+            <h3 class="filters-title">Filters</h3>
+
+            <div class="filter-group">
+              <h4 class="filter-group-title">Category</h4>
+              <label class="filter-option"><input type="checkbox" value="fertiliser" onchange="filterProducts()" checked /> Fertiliser</label>
+              <label class="filter-option"><input type="checkbox" value="seeds" onchange="filterProducts()" checked /> Seeds</label>
+              <label class="filter-option"><input type="checkbox" value="equipment" onchange="filterProducts()" checked /> Equipment</label>
+              <label class="filter-option"><input type="checkbox" value="pesticide" onchange="filterProducts()" checked /> Pesticide</label>
+              <label class="filter-option"><input type="checkbox" value="tools" onchange="filterProducts()" checked /> Tools</label>
+            </div>
+
+            <div class="filter-group">
+              <h4 class="filter-group-title">Price Range</h4>
+              <label class="filter-option"><input type="radio" name="priceRange" value="all" onchange="filterProducts()" checked /> All Prices</label>
+              <label class="filter-option"><input type="radio" name="priceRange" value="0-2000" onchange="filterProducts()" /> Under LKR 2,000</label>
+              <label class="filter-option"><input type="radio" name="priceRange" value="2000-5000" onchange="filterProducts()" /> LKR 2,000 – 5,000</label>
+              <label class="filter-option"><input type="radio" name="priceRange" value="5000-999999" onchange="filterProducts()" /> Over LKR 5,000</label>
+            </div>
+
+            <div class="filter-group">
+              <h4 class="filter-group-title">Ratings</h4>
+              <label class="filter-option"><input type="radio" name="ratingFilter" value="all" onchange="filterProducts()" checked /> All Ratings</label>
+              <label class="filter-option"><input type="radio" name="ratingFilter" value="4" onchange="filterProducts()" /> 4★ &amp; Above</label>
+              <label class="filter-option"><input type="radio" name="ratingFilter" value="3" onchange="filterProducts()" /> 3★ &amp; Above</label>
+            </div>
+
+            <button class="btn btn-primary-sm full-width" onclick="resetFilters()">Reset Filters</button>
+          </aside>
+
+          <!-- Product Grid -->
+          <div class="product-grid" id="productGrid">
+            <!-- Products rendered by JS -->
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5" width="48" height="48" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <p>No products match your search. Try adjusting your filters.</p>
+          <button class="btn btn-primary-sm" onclick="resetFilters()">Clear Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo-text">GreenHarvest</span>
+          <p class="footer-tagline">Smart farming solutions for a sustainable future.</p>
+        </div>
+        <div class="footer-links-group">
+          <p class="footer-heading">Quick Links</p>
+          <a href="#" onclick="showPage('home'); return false;" class="footer-link">Home</a>
+          <a href="#" onclick="showPage('about'); return false;" class="footer-link">About</a>
+          <a href="#" onclick="showPage('services'); return false;" class="footer-link">Services</a>
+          <a href="#" onclick="showPage('marketplace'); return false;" class="footer-link">Marketplace</a>
+        </div>
+        <div class="footer-links-group">
+          <p class="footer-heading">Contact</p>
+          <span class="footer-link">contact@greenharvest.lk</span>
+          <span class="footer-link">+94 11 234 5678</span>
+          <span class="footer-link">Colombo, Sri Lanka</span>
+        </div>
+        <div class="footer-links-group">
+          <p class="footer-heading">Follow Us</p>
+          <a href="#" class="footer-link">Facebook</a>
+          <a href="#" class="footer-link">Instagram</a>
+          <a href="#" class="footer-link">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 GreenHarvest Agriculture Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
